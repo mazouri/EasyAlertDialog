@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="314dp"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:paddingBottom="8dp"
+    android:paddingTop="8dp">
+
+
+    <LinearLayout
+        android:id="@+id/topPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="54dip"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/title_template"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="9dip"
+            android:layout_marginEnd="10dip"
+            android:layout_marginStart="10dip"
+            android:layout_marginTop="6dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/alertTitle"
+                style="?android:attr/textAppearanceLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textAlignment="viewStart" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/titleDivider"
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:gravity="fill_horizontal"
+            android:scaleType="fitXY"
+            android:src="@android:drawable/divider_horizontal_dark"
+            android:visibility="gone" />
+        <!-- If the client uses a customTitle, it will be added here. -->
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/contentPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="12dip"
+            android:paddingTop="2dip"
+            android:fillViewport="true"
+            android:overScrollMode="ifContentScrolls">
+
+            <TextView
+                android:id="@android:id/message"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingBottom="12dp"
+                android:paddingTop="4dp"
+                android:text="message"
+                android:textAppearance="@style/TextAppearance.Easy.Small"
+                android:textColor="@color/easy_primary_text_light"
+                android:textSize="14sp" />
+        </ScrollView>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/customPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginTop="12dp">
+
+        <FrameLayout
+            android:id="@+id/custom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dip"
+            android:paddingTop="5dip" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/button_container1"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginBottom="3dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/easy_button_background">
+        <Button
+            android:id="@android:id/button1"
+            android:layout_width="@dimen/easy_btn_width"
+            android:layout_height="@dimen/easy_btn_height"
+            android:layout_gravity="center"
+            android:background="@drawable/easy_default_btn_blue"
+            android:text="positive"
+            android:textAppearance="@style/TextAppearance.Easy.Medium"
+            android:textColor="@color/easy_primary_text_dark" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/button_container2"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginBottom="3dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/easy_button_background">
+        <Button
+            android:id="@android:id/button2"
+            android:layout_width="@dimen/easy_btn_width"
+            android:layout_height="@dimen/easy_btn_height"
+            android:layout_gravity="center"
+            android:background="@drawable/easy_default_btn_gray"
+            android:text="negative"
+            android:textAppearance="@style/TextAppearance.Easy.Medium"
+            android:textColor="@color/easy_primary_text_dark" />
+    </FrameLayout>
+
+</LinearLayout>

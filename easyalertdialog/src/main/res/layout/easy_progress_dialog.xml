@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:paddingBottom="16dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="16dp">
+
+    <LinearLayout android:id="@+id/body"
+        android:orientation="vertical"
+        android:minHeight="60dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.oliver.easy.widght.EasyProgressView android:id="@android:id/progress"
+            style="@style/easy_progress"
+            android:layout_width="80dp"
+            android:layout_height="80dp"/>
+    </LinearLayout>
+
+    <TextView android:id="@android:id/message"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+    <Button
+        android:id="@android:id/button1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/easy_btn_height"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/easy_default_btn_blue"
+        android:visibility="gone"
+        android:text="positive"
+        android:textAppearance="@style/TextAppearance.Easy.Medium"
+        android:textColor="@color/easy_primary_text_dark" />
+
+    <Button
+        android:id="@android:id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/easy_btn_height"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/easy_default_btn_gray"
+        android:text="negative"
+        android:textAppearance="@style/TextAppearance.Easy.Medium"
+        android:textColor="@color/easy_primary_text_dark" />
+</LinearLayout>

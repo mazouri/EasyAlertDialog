@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parentPanel"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:layout_gravity="center">
+
+
+    <LinearLayout android:id="@+id/topPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout android:id="@+id/title_template"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingTop="27dp">
+            <TextView android:id="@+id/alertTitle"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewStart"
+                android:textColor="@color/easy_dialog_title_color"
+                android:textSize="@dimen/easy_alert_dialog_title_size"/>
+        </LinearLayout>
+        <ImageView android:id="@+id/titleDivider"
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:visibility="gone"
+            android:scaleType="fitXY"
+            android:gravity="fill_horizontal"
+            android:src="@android:drawable/divider_horizontal_dark" />
+        <!-- If the client uses a customTitle, it will be added here. -->
+    </LinearLayout>
+    <LinearLayout android:id="@+id/contentPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:orientation="vertical">
+        <ScrollView android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dip"
+            android:paddingBottom="27dip"
+            android:overScrollMode="ifContentScrolls">
+            <TextView
+                android:id="@android:id/message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingBottom="9dp"
+                android:paddingTop="9dp"
+                android:text="message"
+                android:textAppearance="@style/TextAppearance.Easy.Small"
+                android:textColor="@color/easy_dialog_content_text_color" />
+        </ScrollView>
+    </LinearLayout>
+    <FrameLayout android:id="@+id/customPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_weight="1">
+        <FrameLayout android:id="@+id/custom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dip"
+            android:paddingBottom="5dip" />
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#33000000"
+        />
+
+    <LinearLayout
+        android:id="@+id/buttonPanel"
+        style="?attr/buttonBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/easy_alert_dialog_button_height"
+        android:layoutDirection="locale"
+        android:orientation="horizontal"
+        android:divider="@drawable/easy_dialog_button_divider"
+        android:showDividers="middle">
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:text="button1"
+            android:textAllCaps="false"
+            style="@style/EasyDialogNegativeButtonStyle"
+            />
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:text="button3"
+            android:textAllCaps="false"
+            style="@style/EasyDialogNeutralButtonStyle"/>
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:text="button2"
+            android:textAllCaps="false"
+            style="@style/EasyDialogPositiveButtonStyle"
+            />
+    </LinearLayout>
+
+    <!--not use below-->
+    <FrameLayout
+        android:id="@+id/button_container1"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginBottom="3dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/easy_button_background"
+        android:visibility="gone">
+        <Button
+            android:id="@android:id/button1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/easy_btn_height"
+            android:layout_gravity="center"
+            android:background="@drawable/easy_default_btn_blue"
+            android:text="positive"
+            android:textAppearance="@style/TextAppearance.Easy.Medium"
+            android:textColor="@color/easy_primary_text_dark" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/button_container2"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginBottom="3dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/easy_button_background"
+        android:visibility="gone">
+        <Button
+            android:id="@android:id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/easy_btn_height"
+            android:layout_gravity="center"
+            android:background="@drawable/easy_default_btn_gray"
+            android:text="negative"
+            android:textAppearance="@style/TextAppearance.Easy.Medium"
+            android:textColor="@color/easy_primary_text_dark" />
+    </FrameLayout>
+</LinearLayout>

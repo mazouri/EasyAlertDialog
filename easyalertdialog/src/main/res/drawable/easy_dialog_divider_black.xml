@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nine-patch xmlns:android="http://schemas.android.com/apk/res/android"
+    android:src="@drawable/easy_dialog_divider_alpha"
+    android:tint="#000000"
+    android:alpha="0.2" />

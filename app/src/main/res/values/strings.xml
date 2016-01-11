@@ -1,4 +1,10 @@
 <resources>
-    <string name="app_name">EasyAlertDialog</string>
+    <string name="app_name">EasyAlertDialog Sample</string>
     <string name="action_settings">Settings</string>
+
+    <string name="easy_alert_dialog_title">这是标题</string>
+    <string name="easy_alert_dialog_msg">你可以在这里显示message</string>
+    <string name="easy_alert_dialog_cancel">取消</string>
+    <string name="easy_alert_dialog_confirm">确认</string>
+    <string name="easy_alert_dialog_neutral">中立</string>
 </resources>

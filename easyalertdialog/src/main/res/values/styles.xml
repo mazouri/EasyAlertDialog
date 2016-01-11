@@ -1,0 +1,125 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+
+    <!--EasyAlertDialog start-->
+    <style name="Theme.Easy.Light.Dialog" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.8</item>
+
+        <item name="android:windowAnimationStyle">@style/Animation.Easy.Dialog</item>
+        <item name="easyProgressLayout">@layout/easy_progress_dialog</item>
+        <item name="colorControlActivated">@color/progress_material</item>
+    </style>
+
+    <style name="Animation.Easy.Dialog" parent="android:Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/easy_dialog_enter</item>
+        <item name="android:windowExitAnimation">@anim/easy_dialog_exit</item>
+    </style>
+
+    <style name="EasyDialogPositiveButtonStyle">
+        <item name="android:textColor">#3ba1f8</item>
+        <item name="android:textSize">@dimen/easy_dialog_btn_text_size</item>
+        <item name="android:background">@null</item>
+        <item name="android:minWidth">64dp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:minHeight">@dimen/easy_alert_dialog_button_height</item>
+    </style>
+
+    <style name="EasyDialogNeutralButtonStyle">
+        <item name="android:textColor">#e6000000</item>
+        <item name="android:textSize">@dimen/easy_dialog_btn_text_size</item>
+        <item name="android:background">@null</item>
+        <item name="android:minWidth">64dp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:minHeight">@dimen/easy_alert_dialog_button_height</item>
+    </style>
+
+    <style name="EasyDialogNegativeButtonStyle">
+        <item name="android:textColor">#b2b6bc</item>
+        <item name="android:textSize">@dimen/easy_dialog_btn_text_size</item>
+        <item name="android:background">@null</item>
+        <item name="android:minWidth">64dp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:minHeight">@dimen/easy_alert_dialog_button_height</item>
+    </style>
+
+    <style name="easy_list_view">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:cacheColorHint">@null</item>
+        <item name="android:listSelector">@drawable/easy_list_selector</item>
+        <item name="android:divider">@drawable/easy_list_divider</item>
+        <item name="android:scrollbars">vertical</item>
+        <item name="android:overScrollMode">ifContentScrolls</item>
+        <item name="android:textAlignment">viewStart</item>
+    </style>
+
+    <style name="easy_progress">
+        <item name="barColor">@color/progress_material</item>
+        <item name="progressIndeterminate">true</item>
+    </style>
+
+    <style name="ThemeEasyAlertDialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowTitleStyle">@style/EasyDialogWindowTitle</item>
+        <item name="android:windowBackground">@drawable/easy_dialog_background</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:windowCloseOnTouchOutside">false</item>
+        <item name="android:windowAnimationStyle">@style/Animation.Easy.Dialog</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+
+        <item name="android:buttonBarStyle">@style/EasyDialogNegativeButtonStyle</item>
+        <item name="android:listPreferredItemPaddingLeft">40dip</item>
+        <item name="android:listPreferredItemPaddingRight">40dip</item>
+        <item name="android:listPreferredItemPaddingStart">40dip</item>
+        <item name="android:listPreferredItemPaddingEnd">40dip</item>
+        <item name="android:listDivider">@null</item>
+        <item name="android:windowTitleSize">0dp</item>
+        <item name="android:listDividerAlertDialog">@drawable/easy_dialog_divider_black</item>
+        <item name="android:windowMinWidthMajor">@dimen/easy_dialog_min_width_major</item>
+        <item name="android:windowMinWidthMinor">@dimen/easy_dialog_min_width_minor</item>
+    </style>
+
+    <style name="EasyDialogWindowTitle">
+        <item name="android:textAppearance">@style/TextAppearance.Easy.Large</item>
+    </style>
+    <!--EasyAlertDialog end-->
+
+    <!-- TextAppearance.Easy start-->
+    <style name="TextAppearance.Easy" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">?android:textColorPrimary</item>
+        <item name="android:textColorHint">?android:textColorHint</item>
+        <item name="android:textColorHighlight">?android:textColorHighlight</item>
+        <item name="android:textColorLink">?android:textColorLink</item>
+        <item name="android:textSize">@dimen/easy_text_size_body_1</item>
+    </style>
+
+    <style name="TextAppearance.Easy.Small">
+        <item name="android:textSize">@dimen/easy_text_size_small</item>
+        <item name="android:textColor">?android:attr/textColorTertiary</item>
+    </style>
+
+    <style name="TextAppearance.Easy.Medium">
+        <item name="android:textSize">@dimen/easy_text_size_medium</item>
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+    </style>
+
+    <style name="TextAppearance.Easy.Large">
+        <item name="android:textSize">@dimen/easy_text_size_large</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+    <!-- TextAppearance.Easy start-->
+</resources>
